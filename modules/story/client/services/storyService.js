@@ -21,7 +21,7 @@ module.exports = function () {
         },
         title: function() {
             return {
-                pre: "She grows up...",
+                pre: "她的成长历程...",
                 one: "He grows up...",
                 two: "They grow up...",
                 three: "He proposes...",
