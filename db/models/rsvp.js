@@ -15,7 +15,7 @@ var RsvpSchema = new Schema({
     guestbook: Boolean,
     email: String,
     phone: String,
-    zipcode: Number
+    address: String
 });
 
 module.exports = mongoose.model('Rsvp', RsvpSchema);

@@ -1,47 +1,47 @@
 div.rsvp
     div.text-container
         div.rsvp-text-form
-            p.rsvp-title RSVP
+            p.rsvp-title 请回复我
             form#rsvp-form
                 div.rsvp-details
                     .form-group
-                        | I, 
-                        input#uname(type="text", placeholder="your name here", required="required")
-                        | , am 
+                        | 我是, 
+                        input#uname(type="text", placeholder="您的名字", required="required")
+                        | ,  
                         select#attending
-                            option(value="1") ATTENDING
-                            option(value="0") NOT ATTENDING
-                        |  the festivities.
+                            option(value="1") 我要去(Welcome)
+                            option(value="0") 我不去(Oh,Sorry)
+                        |  参加婚礼.
                     
                     div#extrainfo
                         br
                         .form-group
-                            | My invitation mentioned that I could bring 
+                            | 我可以带着 
                             select#guests
-                                option(value="1") MY SELF
-                                option(value="2") A DATE
-                                option(value="4") MY FAMILY
-                            div#numberguest(style="display: none;")
-                                | of 
-                                input#guestnum(type="number", placeholder="guests (including yourself)", max="15", min="1")
+                                option(value="1") 本人
+                                option(value="2") 伴侣
+                                option(value="4") 家属
+                            div#numberguest(style="display: none;") 
+                                input#guestnum(type="number", placeholder="包括你在内几个人", max="15", min="1")
+                                | 个人.
                         br
                         .form-group
-                            | Tell the bride and groom:
-                            textarea#message(cols="40", rows="4", placeholder="We look forward to celebrating with you!")
+                            | 请您留下对我们的祝福语:
+                            textarea#message(cols="40", rows="4", placeholder="我们期待着您的祝福！")
                             select#guestbook
-                                option(value="1") Show in guestbook
-                                option(value="0") Keep private
+                                option(value="1") 显示在祝福墙
+                                option(value="0") 保密,只让愣愣看
                         br
                         .form-group
-                            | You can ping me, ring me, or bring me more info at:
+                            | 请留下您的联系方式:
                             br
-                            input.extrareq#email(type="email", name="email", placeholder="myemail@example.com")
+                            input.extrareq#email(type="email", name="email", placeholder="邮箱")
                             br
-                            input#phone(type="text", placeholder="(425) 555-1234")
+                            input#phone(type="text", placeholder="手机号码")
                             br
-                            input#zipcode(type="number", placeholder="zipcode (for carpooling)")
+                            input#address(type="text", placeholder="现在的工作地址")
                             br
-                    input#submitbt.submit(type="submit", value="Rsvp")
+                    input#submitbt.submit(type="submit", value="回复")
         div.rsvp-text
-            h1 GUESTBOOK
+            h1 祝福墙
             div.registry-rsvps#rsvps
