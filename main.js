@@ -20,7 +20,7 @@ var routes = require('./modules/main/server');
 */
 
 // all environments
-app.set('port', process.env.PORT || 5000);
+app.set('port', process.env.PORT || 52110);
 app.set('view engine', 'jade');
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
