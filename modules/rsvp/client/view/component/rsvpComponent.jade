@@ -13,17 +13,18 @@ div.rsvp
                             option(value="0") 我不去(Oh,Sorry)
                         |  参加婚礼.
                     
-                    div#extrainfo
-                        br
-                        .form-group
-                            | 我可以带着 
-                            select#guests
-                                option(value="1") 本人
-                                option(value="2") 伴侣
-                                option(value="4") 家属
-                            div#numberguest(style="display: none;") 
-                                input#guestnum(type="number", placeholder="包括你在内几个人", max="15", min="1")
-                                | 个人.
+                    div
+                        div#extrainfo
+                            br
+                            .form-group
+                                | 我可以带着 
+                                select#guests
+                                    option(value="1") 本人
+                                    option(value="2") 伴侣
+                                    option(value="4") 家属
+                                div#numberguest(style="display: none;") 
+                                    input#guestnum(type="number", placeholder="包括你在内几个人", max="15", min="1")
+                                    | 个人.
                         br
                         .form-group
                             | 请您留下对我们的祝福语:
