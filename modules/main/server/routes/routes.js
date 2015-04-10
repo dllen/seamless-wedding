@@ -5,7 +5,7 @@ var Rsvp = mongoose.model('Rsvp');
 var nodemailer = require("emailjs/email");
 
 // create reusable transport method (opens pool of SMTP connections)
-var sendmail = email.server.connect({
+var sendmail = nodemailer.server.connect({
   user: "shi_chao_peng@yeah.net",
   password: "Leng123456@",
   host: "smtp.yeah.net",
