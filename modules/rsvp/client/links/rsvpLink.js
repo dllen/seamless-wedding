@@ -40,7 +40,7 @@ module.exports = function (scope, element, attrs) {
             "guestbook": guestbook,
             "email": $('#email').val(),
             "phone": $('#phone').val(),
-            "zipcode": $('#zipcode').val()
+            "address": $('#address').val()
         };
 
         console.log(formData);
@@ -51,14 +51,14 @@ module.exports = function (scope, element, attrs) {
             data: formData,
             success: function(data) {
                 if (data.Error) {
-                    alert("Your name is not on the guestlist. If you believe this is in error, please contact us.");
+                    alert("Sorry 出错了,请联系我.");
                 } else {
                     console.log("success");
                     location.reload();
                 }  
             },
             error: function(data) {
-                alert("Your name is not on the guestlist. If you believe this is in error, please contact us.");
+                alert("Sorry 出错了,请联系我.");
             }
         });
         return false;
