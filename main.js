@@ -41,6 +41,7 @@ if (app.get('env') === 'production') {
 app.get('/', routes.index);
 app.get('/component/:module/:component', routes.componentViews);
 app.get('/get/rsvps/', routes.getAllRsvps);
+app.get('/get/rsvps/jsonp/',routes.getAllRsvpsJsonp)
 app.get('/get/rsvpinfo/', routes.getAllRsvpInfo);
 app.post('/add/rsvp', routes.addRsvp);
 

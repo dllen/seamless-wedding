@@ -7,7 +7,7 @@ var nodemailer = require("emailjs/email");
 // create reusable transport method (opens pool of SMTP connections)
 var sendmail = nodemailer.server.connect({
   user: "shi_chao_peng@yeah.net",
-  password: "Leng123456@",
+  password: "",
   host: "smtp.yeah.net",
   ssl: true
 })
@@ -44,8 +44,19 @@ exports.getAllRsvps = function(req, res) {
     });
 };
 
+exports.getAllRsvpsJsonp = function(req, res){
+  Rsvp.find({"guestbook" : true}, function(err, result) {
+        if (!err) {
+            res.setHeader('content-type', 'text/javascript');
+            return res.send('var rsvps='+JSON.stringify(result)+';');
+        } else {
+            res.json({'Error': 'Something went wrong'});
+        }
+    });
+}
+
 exports.getAllRsvpInfo = function(req, res) {
-  if (req.query.password == "gethitched") {
+  if (req.query.password == "helloworld") {
     Rsvp.find({}, function(err, result) {
         if (!err) {
             return res.json({'rsvps': result});

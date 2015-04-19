@@ -10,7 +10,7 @@ def resize(folder, fileName, factor, count):
     w, h  = im.size
     newIm = im.resize((int(w*factor), int(h*factor)))
     # i am saving a copy, you can overrider orginal, or save to other folder
-    newIm.save(folder+str(count)+"t.jpg")
+    newIm.save(folder+str(count)+".jpg")
 
 def bulkResize(imageFolder, factor):
     imgExts = ["png", "bmp", "jpg"]
@@ -20,7 +20,7 @@ def bulkResize(imageFolder, factor):
             ext = fileName[-3:].lower()
             if ext not in imgExts:
                 continue
-            count = count+1        
+            count = count+1
             resize(path, fileName, factor, count)
 
 if __name__ == "__main__":
